@@ -1,0 +1,44 @@
+{
+  "name": "walletops",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "A live payments/wallet service with a runtime bug generator, incident dashboard and ticket board.",
+  "engines": {
+    "node": ">=22.12"
+  },
+  "scripts": {
+    "dev": "next dev",
+    "build": "node scripts/migrate.mjs && next build",
+    "start": "next start",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "db:local": "node scripts/local-db.mjs",
+    "db:generate": "drizzle-kit generate",
+    "db:migrate": "node scripts/migrate.mjs",
+    "tick": "node scripts/tick.mjs"
+  },
+  "dependencies": {
+    "drizzle-orm": "^0.45.3",
+    "jose": "^6.2.12",
+    "next": "^16.3.8",
+    "pg": "^8.23.1",
+    "react": "^19.3.0",
+    "react-dom": "^19.3.0",
+    "recharts": "^3.10.1",
+    "zod": "^4.6.5"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4.3.3",
+    "@types/node": "^24.0.0",
+    "@types/pg": "^8.23.1",
+    "@types/react": "^19.2.0",
+    "@types/react-dom": "^19.2.0",
+    "drizzle-kit": "^0.31.11",
+    "embedded-postgres": "17.10.0-beta.17",
+    "tailwindcss": "^4.3.3",
+    "typescript": "^5.9.3",
+    "vitest": "^5.0.3"
+  }
+}

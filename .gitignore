@@ -1,0 +1,23 @@
+# dependencies
+node_modules/
+
+# next.js
+.next/
+out/
+next-env.d.ts
+*.tsbuildinfo
+
+# local database (npm run db:local)
+.localdb/
+
+# env files (never commit secrets)
+.env
+.env.*
+!.env.example
+
+# misc
+coverage/
+.vercel/
+npm-debug.log*
+.DS_Store
+
